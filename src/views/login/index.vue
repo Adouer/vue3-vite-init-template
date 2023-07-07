@@ -27,13 +27,13 @@
 </template>
 
 <script setup lang="ts">
-import { Login } from '@/api/type'
+import { User } from '@/api/type'
 import { ref, reactive } from 'vue'
 //引入用户相关的小仓库
 import useUserStore from '@/store/modules/user'
 const form = ref()
 
-const formData = reactive<Login.LoginFormData>({
+const formData = reactive<User.LoginFormData>({
   username: '',
   password: '',
 })
