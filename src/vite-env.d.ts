@@ -7,5 +7,5 @@ declare module '*.vue' {
 }
 // 解决import.meta爆红问题
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv
 }

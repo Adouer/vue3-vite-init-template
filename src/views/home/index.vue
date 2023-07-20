@@ -19,31 +19,29 @@ import Sidebar from './Sidebar/index.vue'
 import UserInfo from './UserInfo/index.vue'
 import ChatArea from './ChatArea/index.vue'
 import UserList from './UserList/index.vue'
-import { ref } from "vue";
+import { ref } from 'vue'
 
-import { ElMessage } from "element-plus";
-import { useUserStore } from "@/store/modules/user";
-import { useRouter } from "vue-router";
-import RoutePath from "@/config/route-path";
+import { ElMessage } from 'element-plus'
+import { useUserStore } from '@/store/modules/user'
+import { useRouter } from 'vue-router'
+import RoutePath from '@/config/route-path'
 // 拿小仓库
-const userStore = useUserStore();
-const router = useRouter();
-
+const userStore = useUserStore()
+const router = useRouter()
 
 // 退出
 const out = async () => {
-  let result = await userStore.userLogout();
+  let result = await userStore.userLogout()
   if (result) {
     //退出成功
-    router.push(RoutePath.LOGIN);
-  }else{
+    router.push(RoutePath.LOGIN)
+  } else {
     ElMessage({
-      message:'退出失败！',
-      type:'error'
+      message: '退出失败！',
+      type: 'error',
     })
   }
 }
-
 </script>
 
 <style lang="scss" scoped>

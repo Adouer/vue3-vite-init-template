@@ -10,50 +10,53 @@ const http = axios.create({
   timeout: 5000, //超时的时间的设置
 })
 //第二步:http实例添加请求与响应拦截器
-http.interceptors.request.use((config) => {
-  //获取用户相关的小仓库:获取仓库内部token,登录成功以后携带给服务器
-  const userStore = useUserStore()
-  if (userStore.token) {
-    config.headers['Authorization'] = `Bearer ${userStore.token}`
-  }
-  //返回config配置对象,headers属性请求头,经常给服务器端携带公共参数
-  return config
-},
+http.interceptors.request.use(
+  (config) => {
+    //获取用户相关的小仓库:获取仓库内部token,登录成功以后携带给服务器
+    const userStore = useUserStore()
+    if (userStore.token) {
+      config.headers['Authorization'] = `Bearer ${userStore.token}`
+    }
+    //返回config配置对象,headers属性请求头,经常给服务器端携带公共参数
+    return config
+  },
   (error) => {
     //失败回调:处理http网络错误的
-    let message: string;
+    let message: string
 
     // 根据不同的错误类型设置 message 的值
     if (error.response) {
       // 请求已发出，但服务器响应的状态码不在 2xx 范围内
-      message = error.response.data.message || '服务器错误';
+      message = error.response.data.message || '服务器错误'
     } else if (error.request) {
       // 请求已发出，但没有收到响应
-      message = '网络错误，请检查您的网络连接或服务器状态';
+      message = '网络错误，请检查您的网络连接或服务器状态'
     } else {
       // 在设置请求的过程中发生了错误
-      message = '请求失败';
+      message = '请求失败'
     }
     //提示错误信息
     ElMessage({
       type: 'error',
-      message
+      message,
     })
     // 请求错误处理
-    return Promise.reject(error);
-  }),
-
-  //第三步:响应拦截器
-  http.interceptors.response.use((response) => {
-    //成功回调
-    return response;
+    return Promise.reject(error)
   },
+),
+  //第三步:响应拦截器
+  http.interceptors.response.use(
+    (response) => {
+      //成功回调
+      return response
+    },
     (error) => {
       //失败回调:处理http网络错误的
-      let message: string;
+      let message: string
       //http状态码
-      if (error.response) { // 添加此行
-        const status = error.response.status;
+      if (error.response) {
+        // 添加此行
+        const status = error.response.status
         switch (status) {
           case 401:
             message = '未授权'
@@ -77,9 +80,9 @@ http.interceptors.request.use((config) => {
       //提示错误信息
       ElMessage({
         type: 'error',
-        message
+        message,
       })
-      return Promise.reject(error);
+      return Promise.reject(error)
     },
   )
 //对外暴露

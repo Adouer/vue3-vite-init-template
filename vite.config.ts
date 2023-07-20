@@ -6,13 +6,12 @@ import path from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // //mock插件提供方法
 // import { viteMockServe } from 'vite-plugin-mock'
-export default defineConfig(({mode }) => {
-
+export default defineConfig(({ mode }) => {
   //获取各种环境下的对应的变量
   const env = loadEnv(mode, process.cwd())
-  const port = Number(env.VITE_PORT);
+  const port = Number(env.VITE_PORT)
   if (!Number.isInteger(port) || port < 1 || port > 65535) {
-    throw new Error(`无效的端口号: ${env.VITE_PORT}`);
+    throw new Error(`无效的端口号: ${env.VITE_PORT}`)
   }
   return {
     publicPath: env.VITE_SERVE,

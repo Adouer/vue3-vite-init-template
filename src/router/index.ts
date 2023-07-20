@@ -1,7 +1,7 @@
 //通过vue-router插件实现模板路由配置
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { constantRoute } from './routes'
-import { useUserStore } from "@/store/modules/user";
+import { useUserStore } from '@/store/modules/user'
 //创建路由器
 const router = createRouter({
   //路由模式hash
@@ -18,8 +18,8 @@ const router = createRouter({
 
 // 校验是否登录
 const islogined = () => {
-  const userStore = useUserStore();
-  return !(userStore.token === '' || userStore.token === null);
+  const userStore = useUserStore()
+  return !(userStore.token === '' || userStore.token === null)
 }
 // 拦截没有权限权限和未登录用户
 router.beforeEach((to, form, next) => {

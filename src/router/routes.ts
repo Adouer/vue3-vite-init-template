@@ -1,7 +1,7 @@
 import Login from '@/views/login/index.vue'
 import Home from '@/views/home/index.vue'
 import Register from '@/views/register/index.vue'
-import RoutePath  from "@/config/route-path";
+import RoutePath from '@/config/route-path'
 
 //对外暴露配置路由(常量路由):全部用户都可以访问到的路由
 export const constantRoute = [

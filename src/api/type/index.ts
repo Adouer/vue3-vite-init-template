@@ -21,11 +21,11 @@ export namespace User {
     }
   }
 }
-  //定义全部接口返回数据都拥有ts类型
-  export interface ResponseData {
-    msg: string
-    status: number
-    data: {
-      jwt : string
-    }
+//定义全部接口返回数据都拥有ts类型
+export interface ResponseData {
+  msg: string
+  status: number
+  data: {
+    jwt: string
   }
+}
