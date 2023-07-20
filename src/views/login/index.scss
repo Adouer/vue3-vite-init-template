@@ -1,0 +1,61 @@
+.container {
+    display: flex;  /* 添加这个以启用flex布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+    min-height: 100vh;  /* 设置最小高度为视口高度以确保容器始终填满屏幕 */
+  
+    background-color: #191919 !important;
+    background-image: url('@/assets/images/login_bg.svg');
+    background-size: 100% 100%;
+    background-size: cover;
+    
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+  
+    .row {
+      background: #313338;
+      border: 1px solid #33658a;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  
+      .col {
+        text-align: center;
+  
+        .title {
+          font-size: 24px;
+          color: #f8f8f8;
+          margin-bottom: 10px;
+        }
+  
+        .description {
+          font-size: 16px;
+          color: #999;
+          margin-bottom: 30px;
+        }
+  
+        .login-form {
+          text-align: left;
+          .el-input {
+            width: 250px;  /* 增加输入框宽度 */
+          }
+        }
+  
+        .forgot-link,
+        .register-link {
+          color: #409eff;
+          cursor: pointer;
+          text-decoration: underline;
+          text-align: left;
+        }
+  
+        .forgot-link {
+          margin-bottom: 10px;
+        }
+      }
+  
+    }
+  }
+  

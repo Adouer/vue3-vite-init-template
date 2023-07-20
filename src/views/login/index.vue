@@ -1,25 +1,21 @@
 <template>
-  <el-container class="container">
-    <el-row class="row" :gutter="20">
-      <el-col :span="24" class="col">
-        <h2 class="title">欢迎回来！</h2>
-        <p class="description">We're so excited to see you again!</p>
-        <el-form
-          ref="form"
-          :model="formData"
-          :rules="loginRules"
-          label-width="120px"
-          class="login-form"
-        >
-          <el-form-item label="用户名">
-            <el-input v-model="formData.username"></el-input>
+  <el-container class="container" style="background-color:pink;">
+    <el-row class="row">
+      <el-col :span="24" class="col" >
+        <h2 class="title">登录</h2>
+        <p class="description">balabala</p>
+        <el-form ref="form" :model="formData" :rules="loginRules" label-width="150px" class="login-form">
+          <el-form-item label="用户名" prop="username">
+            <el-input v-model="formData.username" @input="clearError"></el-input>
           </el-form-item>
-          <el-form-item label="密码">
-            <el-input type="password" v-model="formData.password"></el-input>
+          <el-form-item label="密码" prop="password">
+            <el-input type="password" v-model="formData.password" @input="clearError"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="login">登录</el-button>
+            <el-button type="primary" @click="login" :loading="isLoading">登录</el-button>
           </el-form-item>
+          <el-link type="primary" @click="forgotPassword">忘记密码？</el-link>
+          <el-link type="primary" @click="register">注册</el-link>
         </el-form>
       </el-col>
     </el-row>
@@ -27,72 +23,72 @@
 </template>
 
 <script setup lang="ts">
-import { User } from '@/api/type'
-import { ref, reactive } from 'vue'
+import { User } from '@/api/type';
+import { ref, reactive, computed } from 'vue';
+import RoutePath  from "@/config/route-path";
+
 //引入用户相关的小仓库
 import useUserStore from '@/store/modules/user'
-const form = ref()
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const form = ref();
+const userStore = useUserStore();
+const isLoading = ref(false); //登录按钮是否被禁止
 
 const formData = reactive<User.LoginFormData>({
   username: '',
   password: '',
 })
 // 校验的规则
-const loginRules = reactive({
-  username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-  password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-})
+const loginRules = computed(() => ({
+  username: [
+    { required: true, message: '请输入用户名', trigger: 'blur' }
+  ],
+  password: [
+    { required: true, message: '请输入密码', trigger: 'blur' },
+    { min: 8, max: 16, message: '密码长度必须在8-16位之间', trigger: 'blur' },
+    { pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/, message: '密码必须包含至少一位字母和一位数字', trigger: 'blur' }
+  ]
+}));
+
 // 登录方法
 const login = async () => {
-  // 校验
-  await form.value.validate((valid: boolean) => {
-    if (valid) {
-      alert('submit!')
-    } else {
-      console.log('error submit!!')
-      return false
-    }
-  })
-  try {
-    // 调用仓库执行登录
-  } catch (error) {
-    //登录失败处理
+  // 登录过程禁用登录按钮，防止用户二次点击
+  isLoading.value = true;
+  //校验表单
+  const valid = await new Promise<boolean>((resolve) => {
+    form.value.validate((valid: boolean) => {
+      resolve(valid);
+    });
+  });
+  // 校验失败返回
+  if (!valid) {
+    isLoading.value = false;
+    return;
   }
+  // 调用仓库执行登录
+  let result = await userStore.userLogin(formData);
+  if (result) {
+    // 跳转到首页
+    router.push(RoutePath.HOME);
+  }
+  isLoading.value = false;
+}
+// 清除之前的表单验证错误信息
+const clearError = () => {
+  form.value.clearValidate();
+}
+const forgotPassword = () => {
+  router.push("/forgot-password"); // 假设这是你的忘记密码页面路由
+}
+
+// 注册处理
+const register = () => {
+  router.push(RoutePath.REGISTER); // 假设这是你的注册页面路由
 }
 </script>
 
-<style scoped>
-.container {
-  width: 400px;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-
-.row {
-  background: #f8f8f8;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-}
-
-.col {
-  text-align: center;
-}
-
-.title {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-size: 16px;
-  color: #999;
-  margin-bottom: 30px;
-}
-
-.login-form {
-  text-align: left;
-}
+<style lang="scss" scoped>
+@import "./index.scss";
 </style>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="100%" height="100%" viewBox="0 0 1400 800">
+
+  <text x="1300" y="500" font-size="60" fill="rgb(129, 201, 149)">ad-chat
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite"/>
+  </text>
+
+  <text x="280" y="400" font-size="40" fill="#a2b3ff">ad-chat
+    <animateMotion path="M 800 -200 L 800 -300 L 800 -200" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 210 530 ; -30 210 530 ; 0 210 530" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </text>
+
+  <text x="50" y="250" font-size="80" fill="#85FFBD">ad-chat
+    <animateMotion path="M 0 0 L 40 20 Z" dur="5s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="190" y="550" font-size="40" fill="#a2b3ff">ad-chat
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 210 530" to="360 210 530" repeatCount="indefinite"/>
+  </text>
+
+  <text x="140" y="390" font-size="40" fill="#3054EB">ad-chat
+    <animateMotion path="M 140 390 L 180 360 L 140 390" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 140 390; -60 140 390; 0 140 390" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </text>
+
+  <text x="400" y="660" font-size="60" fill="#3054EB">ad-chat
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="-30 550 750" to="330 550 750" repeatCount="indefinite"/>
+  </text>
+
+
+</svg>

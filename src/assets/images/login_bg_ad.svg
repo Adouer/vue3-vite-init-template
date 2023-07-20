@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="100%" height="100%" viewBox="0 0 1400 800">
+
+  <!-- Video Icon (Referenced from "左上圆") -->
+  <path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm15 2H5a3 3 0 0 1-3-3V4.97a2.99 2.99 0 0 1 3-3h14c1.66 0 3 1.34 3 3V19a3 3 0 0 1-3 3z" fill="#EA800C" transform="translate(0, 0) scale(8)">
+      <animateMotion path="M 0 0 L 80 40 Z" dur="7s" repeatCount="indefinite"/>
+  </path>
+  <g transform="translate(0.000000,326.000000) scale(0.100000,-0.100000)"
+ fill="#33658a" stroke="none">
+<path d="M206 3200 c-41 -13 -94 -68 -106 -110 -13 -48 -13 -2842 0 -2890 12
+-45 65 -97 111 -110 46 -14 2841 -13 2889 0 45 12 97 65 110 111 14 46 14
+2842 0 2888 -13 46 -65 99 -110 111 -44 12 -2853 12 -2894 0z m283 -329 c24
+-24 17 -59 -13 -71 -45 -17 -82 35 -50 71 22 24 39 24 63 0z m412 9 c41 -22 4
+-99 -40 -82 -34 12 -43 64 -13 81 22 13 29 13 53 1z m424 -14 c18 -26 11 -52
+-16 -67 -22 -12 -53 2 -63 27 -9 23 20 64 44 64 11 0 26 -11 35 -24z m1575
+-26 l0 -50 -465 0 -465 0 0 50 0 50 465 0 465 0 0 -50z m210 -1489 c0 -1014
+-2 -1131 -16 -1145 -14 -14 -158 -16 -1439 -16 -1281 0 -1425 2 -1439 16 -14
+14 -16 131 -16 1145 l0 1129 1455 0 1455 0 0 -1129z" fill="#33658a"/>
+<path d="M428 2259 c-17 -9 -18 -54 -18 -719 0 -691 0 -710 19 -720 13 -7 414
+-10 1226 -10 812 0 1213 3 1226 10 19 10 19 29 19 720 0 691 0 710 -19 720
+-27 14 -2429 13 -2453 -1z m2372 -719 l0 -620 -1145 0 -1145 0 0 620 0 620
+1145 0 1145 0 0 -620z" fill="#ff6b6b"/>
+<path d="M1412 1844 c-22 -15 -22 -17 -22 -297 1 -305 3 -317 54 -317 15 0 67
+25 120 58 51 31 147 91 214 132 169 104 177 129 69 198 -286 181 -387 242
+-401 242 -6 0 -22 -7 -34 -16z m227 -224 c66 -41 121 -77 121 -80 0 -4 -176
+-114 -237 -148 l-23 -13 0 162 c0 88 4 159 9 157 5 -1 63 -37 130 -78z" fill="#fff"/>
+<path d="M947 698 c-9 -7 -17 -31 -19 -53 l-3 -40 -253 -3 -253 -2 -10 -27
+c-7 -19 -6 -31 6 -49 l15 -24 250 0 250 0 0 -38 c0 -45 14 -62 50 -62 45 0 50
+14 50 151 0 103 -3 131 -16 143 -19 19 -44 20 -67 4z" fill="#ffd04b"/>
+<path d="M1138 575 c-9 -19 -8 -29 6 -50 l16 -25 858 0 c654 0 861 3 870 12 7
+7 12 24 12 38 0 14 -5 31 -12 38 -9 9 -217 12 -875 12 l-863 0 -12 -25z" />
+</g>
+ <!-- 右上半圆 -->
+  <path d="M 100 350 A 150 150 0 1 1 400 350 Q400 370 380 370 L 250 370 L 120 370 Q100 370 100 350" fill="#a2b3ff">
+    <animateMotion path="M 800 -200 L 800 -300 L 800 -200" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 210 530 ; -30 210 530 ; 0 210 530" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </path>
+  <!-- Audio Icon (Referenced from "三角形") -->
+  <g transform="translate(100, 500) scale(5)">
+    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.07c1.48-.74 2.5-2.27 2.5-4.04zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" fill="#3DC38A">
+      <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 0 0" to="360 0 0" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Image Icon (Referenced from "右上半圆") -->
+  <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2zm-11-7l2.03 2.71L15 13l4 5H5l5-6.01L10 12z" fill="#F2B843"  transform="translate(750, 300) scale(5)">
+    <animateMotion path="M 300 200 L 100 100 L 300 200" begin="0s" dur="10s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Text Icon (Referenced from "右下矩形") -->
+  <path d="M5 4v3h5.5v12h3V7H19V4z" fill="#2F9B77">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite"/>
+  </path>
+     <!-- 右下矩形 -->
+  <rect x="1300" y="400" rx="40" ry="40" width="150" height="150" stroke="rgb(129, 201, 149)" fill="rgb(129, 201, 149)">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="10s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite"/>
+  </rect>
+  <path d="M 100 350 A 40 40 0 1 1 180 350 L 180 430 A 40 40 0 1 1 100 430 Z" fill="#a2b3ff">
+    <animateMotion path="M 140 390 L 180 360 L 140 390" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 140 390; -60 140 390; 0 140 390" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </path>
+
+   <text x="1000" y="450" font-size="60" fill="rgb(129, 201, 149)">ad-chat
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1050 550" to="360 1050 500" repeatCount="indefinite"/>
+  </text>
+
+  <text x="280" y="400" font-size="40" fill="#a2b3ff">ad-chat
+    <animateMotion path="M 800 -200 L 800 -300 L 800 -200" dur="20s" begin="0s" repeatCount="indefinite"/>
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" values="0 210 530 ; -30 210 530 ; 0 210 530" keyTimes="0 ; 0.5 ; 1" repeatCount="indefinite"/>
+  </text>
+
+
+  <text x="190" y="550" font-size="40" fill="#a2b3ff">ad-chat
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 210 530" to="360 210 530" repeatCount="indefinite"/>
+  </text>
+
+
+</svg>

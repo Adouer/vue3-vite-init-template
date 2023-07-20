@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src/views/home/ChatArea
+src/views/home/Sidebar
+src/views/home/UserInfo
+src/views/home/UserList

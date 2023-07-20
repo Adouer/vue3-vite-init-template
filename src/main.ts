@@ -8,7 +8,7 @@ import 'virtual:svg-icons-register'
 import router from './router'
 //引入仓库
 import pinia from './store'
-
+// 引入全局样式
 import '@/styles/index.scss'
 import globalComponent from './components'
 

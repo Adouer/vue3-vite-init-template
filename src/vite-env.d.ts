@@ -5,3 +5,7 @@ declare module '*.vue' {
   const Component: ReturnType<typeof defineComponent>
   export default Component
 }
+// 解决import.meta爆红问题
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

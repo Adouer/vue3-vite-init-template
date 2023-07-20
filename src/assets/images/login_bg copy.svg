@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="100%" height="100%" viewBox="0 0 1400 800">
+
+  <!-- Video Icon (Referenced from "左上圆") -->
+  <path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm15 2H5a3 3 0 0 1-3-3V4.97a2.99 2.99 0 0 1 3-3h14c1.66 0 3 1.34 3 3V19a3 3 0 0 1-3 3z" fill="#EA800C" transform="translate(0, 0) scale(8)">
+      <animateMotion path="M 0 0 L 80 40 Z" dur="7s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Audio Icon (Referenced from "三角形") -->
+<g transform="translate(100, 500) scale(5)">
+  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.07c1.48-.74 2.5-2.27 2.5-4.04zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" fill="#3DC38A">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 0 0" to="360 0 0" repeatCount="indefinite"/>
+  </path>
+</g>
+
+  <!-- Image Icon (Referenced from "右上半圆") -->
+  <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2zm-11-7l2.03 2.71L15 13l4 5H5l5-6.01L10 12z" fill="#F2B843">
+    <animateMotion path="M 1600 -200 L 1600 -300 L 1600 -200" dur="50s" begin="0s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Text Icon (Referenced from "右下矩形") -->
+  <path d="M5 4v3h5.5v12h3V7H19V4z" fill="#2F9B77">
+    <animateTransform attributeType="XML" attributeName="transform" begin="0s" dur="35s" type="rotate" from="0 1450 550" to="360 1450 550" repeatCount="indefinite"/>
+  </path>
+</svg>

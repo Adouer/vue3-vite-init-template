@@ -6,11 +6,16 @@ import path from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // //mock插件提供方法
 // import { viteMockServe } from 'vite-plugin-mock'
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({mode }) => {
+
   //获取各种环境下的对应的变量
   const env = loadEnv(mode, process.cwd())
+  const port = Number(env.VITE_PORT);
+  if (!Number.isInteger(port) || port < 1 || port > 65535) {
+    throw new Error(`无效的端口号: ${env.VITE_PORT}`);
+  }
   return {
-    publicPath: 'xxx',
+    publicPath: env.VITE_SERVE,
     plugins: [
       vue(),
       createSvgIconsPlugin({
@@ -37,6 +42,7 @@ export default defineConfig(({ command, mode }) => {
     },
     //代理跨域
     server: {
+      port,
       proxy: {
         [env.VITE_APP_BASE_API]: {
           //获取数据的服务器地址设置
@@ -50,3 +56,4 @@ export default defineConfig(({ command, mode }) => {
     },
   }
 })
+// by:adouer

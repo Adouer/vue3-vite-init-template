@@ -1,11 +1,13 @@
 import Login from '@/views/login/index.vue'
 import Home from '@/views/home/index.vue'
+import Register from '@/views/register/index.vue'
+import RoutePath  from "@/config/route-path";
 
 //对外暴露配置路由(常量路由):全部用户都可以访问到的路由
 export const constantRoute = [
   //首页
   {
-    path: '/',
+    path: RoutePath.HOME,
     component: Home,
     name: 'home',
     meta: {
@@ -14,12 +16,23 @@ export const constantRoute = [
   },
   {
     //登录
-    path: '/login',
+    path: RoutePath.LOGIN,
     component: Login,
     name: 'login',
     meta: {
       title: '登录', //菜单标题
-      hidden: true, //代表路由标题在菜单中是否隐藏  true:隐藏 false:不隐藏
+      hidden: false, //代表路由标题在菜单中是否隐藏  true:隐藏 false:不隐藏
+      icon: 'Promotion', //菜单文字左侧的图标,支持element-plus全部图标
+    },
+  },
+  {
+    //注册
+    path: RoutePath.REGISTER,
+    component: Register,
+    name: 'register',
+    meta: {
+      title: '注册', //菜单标题
+      hidden: false, //代表路由标题在菜单中是否隐藏  true:隐藏 false:不隐藏
       icon: 'Promotion', //菜单文字左侧的图标,支持element-plus全部图标
     },
   },
