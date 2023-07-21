@@ -1,10 +1,7 @@
 //创建用户相关的小仓库
 import { defineStore } from 'pinia'
 //引入接口
-import {
-  reqLogin,
-  reqRegister,
-} from '@/api/modules/user'
+import { reqLogin, reqRegister } from '@/api/modules/user'
 import type { User } from '@/api/type'
 import type { UserState } from '@/store/type'
 //引入操作本地存储的工具方法
@@ -46,7 +43,7 @@ export const useUserStore = defineStore('User', {
     async userRegister(formData: User.LoginFormData) {
       try {
         // 注册方法
-        const userInfoReponseData: User.userInfoReponseData = await reqRegister(
+        await reqRegister(
           formData,
         )
         return true
@@ -56,7 +53,8 @@ export const useUserStore = defineStore('User', {
       }
     },
     //获取用户信息方法
-    async getUserInfo() {},
+    async getUserInfo() {
+    },
     //退出登录
     async userLogout() {
       try {
